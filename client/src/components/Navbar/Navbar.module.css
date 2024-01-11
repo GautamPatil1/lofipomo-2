@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+    margin-left: 42%;
+    padding: .5rem;
+    color: white;
+}
+
+.user{
+    margin-left: auto;
+    padding: 1rem;
+    align-self:flex-start;
+    color:white;
+    cursor: pointer;
+    
+}
+
+
+.username{
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+
+.userPhoto{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-direction: row;
+    }
+    .logo{
+        margin:0;
+        margin-left: .5rem;
+
+    }
+    .user{
+        margin-right: 0;
+    }
+    .username{
+        padding: 0;
+    }
+    .userPhoto{
+        width: 2rem;
+        height: 2rem;
+    }
+}

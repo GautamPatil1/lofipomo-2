@@ -1,0 +1,147 @@
+.App{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: background-image 2s ease-in-out;
+  height: 100vh;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+}
+
+
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.TodoWrapper {
+  background: rgba(13, 23, 71, 0.8);
+  backdrop-filter: blur(10px);
+  /*Craete box shadow with slight white*/
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-y: auto;
+  border: 1px solid white;
+}
+
+.TodoForm {
+  width: 100%;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: 1px solid #8758ff;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  width: 12.5rem;
+}
+
+.todo-input::placeholder {
+  width: 100%;
+  color: #ffffff4d;
+}
+
+.todo-btn {
+  background: #8758ff;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8758ff;
+  color: #fff;
+  padding: 0 1rem;
+  border-radius: 5px;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  width: 17rem;
+}
+
+.fa-pen-to-square{
+  margin-left: .3rem;
+}
+
+.fa-trash {
+  margin-left: .3rem;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+}
+
+.cal{
+  color:white;
+}
+
+.temp{
+  float: right;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .App{
+    height: 100%;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .TodoWrapper {
+    width: 100%;
+    overflow-y:visible;
+    margin-bottom: 2rem;
+  }
+  .Todo {
+    width: auto;
+  }
+
+  .TodoForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+
+  .todo-input{
+    flex: 1;
+    align-self: center;
+    margin: 0;
+  }
+
+  .todo-btn{
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .fa-trash{
+    margin: 0;
+    margin-left: 1rem;
+  }
+  .fa-pen-to-square{
+    margin: 0;
+    margin-left: 1rem;
+  }
+}

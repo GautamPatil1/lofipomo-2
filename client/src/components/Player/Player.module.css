@@ -1,0 +1,51 @@
+.container {
+  border-radius: 5px;
+  overflow: hidden;
+  justify-content: space-around;
+  /*Write tealish glass whitish rgba*/
+  background: rgba(55, 126, 137, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  width: 46rem;
+}
+
+.gif{
+  display: block;
+  height: 80%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 1s ease-in-out;
+}
+
+.control{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  cursor: pointer;
+}
+
+.playpause{
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    height: 25rem;
+    width: 110%;
+    overflow: visible;
+    margin-bottom: 2rem;
+  }
+
+
+  .gif{
+    width: auto;
+    height: 20rem;
+  }
+  .control{
+    margin-top: 1rem;
+  }
+}
