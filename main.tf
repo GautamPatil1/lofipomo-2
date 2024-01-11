@@ -11,8 +11,6 @@ terraform {
 
 provider "aws" {
   region = "ap-south-1"
-  #   set AWS_ACCESS_KEY_ID=AKIAXUSE6JYXAJLSPIZI
-  #   set AWS_SECRET_ACCESS_KEY=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
 }
 
 ## Security groups
