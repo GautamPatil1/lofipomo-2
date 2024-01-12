@@ -6,7 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 export const useTodos = (initialTodos) => {
   const [todos, setTodos] = useState(initialTodos);
   const { user, isAuthenticated } = useAuth0();
-  const server = 'https://lofipomo.gautampatil.tech'
+  const server = 'https://server.gautampatil.tech'
 
   useEffect(() => {
 

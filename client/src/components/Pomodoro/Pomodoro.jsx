@@ -11,7 +11,7 @@ const Pomodoro = () => {
   const [sessionLength, setSessionLength] = useState(25 * 60);
   const [notes, setNotes] = useState(localStorage.getItem('notes')|| '');
   const { isAuthenticated, user } = useAuth0();
-  const server = 'https://lofipomo.gautampatil.tech'
+  const server = 'https://server.gautampatil.tech'
 
 
   useEffect( () => {
