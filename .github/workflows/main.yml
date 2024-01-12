@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: installing docker, docker-compose and cloudfared.
-      uses: appleboy/ssh-actions@v1.0.3
+      uses: appleboy/ssh-action@v1.0.3
       with:
         hosts: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_USERNAME}}
