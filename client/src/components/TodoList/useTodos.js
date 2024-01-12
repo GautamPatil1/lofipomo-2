@@ -6,6 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 export const useTodos = (initialTodos) => {
   const [todos, setTodos] = useState(initialTodos);
   const { user, isAuthenticated } = useAuth0();
+  const server = 'https://lofipomo.gautampatil.tech'
 
   useEffect(() => {
 
@@ -13,7 +14,7 @@ export const useTodos = (initialTodos) => {
       // Check if the user is authenticated
       if (isAuthenticated) {
         // Update the database with the current todos
-        await fetch("http://localhost:5000/api/todos", {
+        await fetch(`${server}/api/todos`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -40,7 +41,7 @@ export const useTodos = (initialTodos) => {
     const fetchTodosFromServer = async () => {
       if (isAuthenticated) {
         try {
-          const response = await fetch(`http://localhost:5000/api/todos/${user.sub}`);
+          const response = await fetch(`${server}/api/todos/${user.sub}`);
           const data = await response.json();
           setTodos(data);
         } catch (error) {
@@ -67,7 +68,7 @@ export const useTodos = (initialTodos) => {
 
     // Send newTodo to the server
     if (isAuthenticated) {
-      fetch("http://localhost:5000/api/todos", {
+      fetch(`${server}/api/todos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -81,7 +82,7 @@ export const useTodos = (initialTodos) => {
     setTodos(todos.filter((todo) => todo.id !== id));
     // Delete the todo from the server
     if (isAuthenticated) {
-      await fetch(`http://localhost:5000/api/todos/${id}`, {
+      await fetch(`${server}/api/todos/${id}`, {
         method: "DELETE",
       });
     }
@@ -102,7 +103,7 @@ export const useTodos = (initialTodos) => {
 
     // Update completion status on the server
     if (updatedTodo && isAuthenticated) {
-      fetch(`http://localhost:5000/api/todos/${id}`, {
+      fetch(`${server}/api/todos/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -121,7 +122,7 @@ export const useTodos = (initialTodos) => {
     // Update task text on the server
     if (isAuthenticated) {
       try {
-        await fetch(`http://localhost:5000/api/todos/${id}`, {
+        await fetch(`${server}/api/todos/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

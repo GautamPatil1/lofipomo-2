@@ -5,7 +5,9 @@ const cors = require('cors');
 const app = express();
 const uri = "mongodb+srv://gautampatil:MGsxw0XPIc2qFGaK@gautam.5nbd8ho.mongodb.net/?retryWrites=true&w=majority";
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://lofipomo.gautampatil.tech']
+}));
 app.use(express.json());
 
 const client = new MongoClient(uri);

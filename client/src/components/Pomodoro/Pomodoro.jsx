@@ -11,6 +11,7 @@ const Pomodoro = () => {
   const [sessionLength, setSessionLength] = useState(25 * 60);
   const [notes, setNotes] = useState(localStorage.getItem('notes')|| '');
   const { isAuthenticated, user } = useAuth0();
+  const server = 'https://lofipomo.gautampatil.tech'
 
 
   useEffect( () => {
@@ -20,7 +21,7 @@ const Pomodoro = () => {
   useEffect(() => {
     // Fetch notes from the server when the component mounts
     if (isAuthenticated) {
-      fetch(`http://localhost:5000/api/notes/${user.sub}`)
+      fetch(`${server}/api/notes/${user.sub}`)
         .then(response => response.json())
         .then(data => setNotes(data.notes));
     }
@@ -29,7 +30,7 @@ const Pomodoro = () => {
   useEffect(() => {
     // Update notes on the server whenever they change
     if (isAuthenticated) {
-      fetch(`http://localhost:5000/api/notes/${user.sub}`, {
+      fetch(`${server}/api/notes/${user.sub}`, {
         method: "PUT",
         headers: {
           'Content-Type': 'application/json',

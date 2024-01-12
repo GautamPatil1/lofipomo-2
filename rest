@@ -1,0 +1,6 @@
+POST https://server.gautampatil.tech/api HTTP/1.1
+content-type: application/json
+
+{
+    task: "lol"
+}

@@ -1,0 +1,1 @@
+GET https://server.gautampatil.tech/api HTTP/1.1
