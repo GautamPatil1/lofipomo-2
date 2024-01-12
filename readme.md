@@ -1,12 +1,10 @@
-# LofiPomo: A Productivity Dashboard
+# [LofiPomo: A Productivity Dashboard](https://lofipomo.gautampatil.tech)
 
 ![LofiPomo](/lofipomo-desktop.png)
 
 ## LofiPomo: A Productivity Dashboard
 
 Lofipomo is a MERN (MongoDB, Express, React, Node) full-stack web application designed to enhance productivity by combining a variety of features. It includes a Lofi Radio for tuning into your favorite chill tunes, a Todo List manager, a Notepad for jotting down your thoughts, and a Pomodoro Timer for effective time management.
-
-[lofipomo: Test App, No Auth Feature](https://lofipomo.gautampatil.tech)
 
 ## Features
 
@@ -47,4 +45,3 @@ OR
 1. Clone the repo
 2. Install packages in the said frontend & backend directories.
 3. run `npm start` in both directories.
-

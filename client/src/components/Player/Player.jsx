@@ -25,6 +25,7 @@ const Player = ({changeBackgroundImage}) => {
   };
 
   const nextTrack = () => {
+    audioRef.current.play();
     const newIndex = (index + 1) % lofis.length;
     const newGif = process.env.PUBLIC_URL + '/assets/gifs/desktop/' + (newIndex + 1) + '.gif';
     changeBackgroundImage(newGif);
@@ -32,6 +33,7 @@ const Player = ({changeBackgroundImage}) => {
   };
  
   const prevTrack = () => {
+    audioRef.current.play();
     const newIndex = (index - 1 + lofis.length) % lofis.length;
     const newGif = process.env.PUBLIC_URL + '/assets/gifs/desktop/' + (newIndex + 1) + '.gif';
     changeBackgroundImage(newGif);
@@ -88,10 +90,11 @@ const Player = ({changeBackgroundImage}) => {
         ></i>
       </div>
       <audio
-        id="player"g
+        id="player"
         ref={audioRef}
         onPlay={handlePlay}
         onPause={handlePause}
+        autoPlay={true}
       >
         <source src={lofis[index]} />
       </audio>

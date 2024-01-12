@@ -243,7 +243,7 @@ const Pomodoro = () => {
           name=""
           id="notes"
           placeholder={isAuthenticated ? user.name + "'s Notes Here." : "Write Notes Here..."}
-          value={notes}
+          value={notes ? notes :  `Notes Here.`}
           onChange={handleNotesChange}
         ></textarea>
       </div>
