@@ -44,9 +44,9 @@ jobs:
           curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && sudo dpkg -i cloudflared.deb && sudo cloudflared service install eyJhIjoiMjI2NjMwOTIxNjc3ZTkxNTEzNmYxMzgyNmExMjg1NTEiLCJ0IjoiZmMxMDdkYjYtMGM5Zi00YTU2LTljNjctZTgzY2RlNWUxNjg3IiwicyI6IllUWTNOMlUyWmpRdFpXSTROUzAwTnpaaUxXRTNZVGN0WkRFMVpXVTRZamczT1dGayJ9
           cd $GITHUB_WORKSPACE  # Change to the repository directory
           # Assuming your docker-compose.yml is in the root of the repository
-          docker-compose down -v  # Stop and remove containers, networks, and volumes
-          docker-compose pull      # Pull the latest images
-          docker-compose up -d     # Start the containers in 
+          sudo docker compose down -v  # Stop and remove containers, networks, and volumes
+          sudo docker compose pull      # Pull the latest images
+          sudo docker compose up -d     # Start the containers in 
 
 
 
