@@ -2,14 +2,14 @@ version: '3'
 
 services:
   frontend:
-    image: gautampatil1/lofipomo-2-client:latest
+    image: gautampatil1/lofipomo-client:latest
     ports:
       - "3000:3000"
     depends_on:
       - backend
 
   backend:
-    image: gautampatil1/lofipomo-2-server:latest
+    image: gautampatil1/lofipomo-server:latest
     ports:
       - "5000:5000"
     
