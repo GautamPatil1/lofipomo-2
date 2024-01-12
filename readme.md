@@ -6,6 +6,8 @@
 
 Lofipomo is a MERN (MongoDB, Express, React, Node) full-stack web application designed to enhance productivity by combining a variety of features. It includes a Lofi Radio for tuning into your favorite chill tunes, a Todo List manager, a Notepad for jotting down your thoughts, and a Pomodoro Timer for effective time management.
 
+![LofiPomo](.lofipomo-mobile.png)
+
 ## Features
 
 - **Lofi Radio Streams:** Tune into your favorite lofi songs while you work.Enjoy a curated selection of Lofi music streams to create a relaxed atmosphere while working.
