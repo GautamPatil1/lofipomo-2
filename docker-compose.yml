@@ -7,6 +7,9 @@ services:
       - "3000:3000"
     depends_on:
       - backend
+    environment:
+      - WDS_SOCKET_PORT=0
+
 
   backend:
     image: gautampatil1/lofipomo-server:latest
