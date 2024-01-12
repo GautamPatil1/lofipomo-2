@@ -45,6 +45,7 @@ jobs:
           cd $GITHUB_WORKSPACE  # Change to the repository directory
           ls -l
           # Assuming your docker-compose.yml is in the root of the repository
+          curl -O -L https://raw.githubusercontent.com/GautamPatil1/lofipomo-2/master/docker-compose.yml
           sudo docker compose down -v  # Stop and remove containers, networks, and volumes
           sudo docker compose pull      # Pull the latest images
           sudo docker compose up -d     # Start the containers in 
