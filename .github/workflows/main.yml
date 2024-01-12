@@ -21,3 +21,41 @@ jobs:
         docker push gautampatil1/lofipomo-client
         docker push gautampatil1/lofipomo-server
 
+  install-docker-and-docker-compose:
+    runs-on: ubuntu-latest
+    steps:
+    - name: installing docker, docker-compose and cloudfared.
+      uses: appleboy/ssh-actions@v1.0.3
+      with:
+        hosts: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USERNAME}}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          sudo apt-get update -y
+          curl -fsSL https://get.docker.com -o get-docker.sh
+          sudo sh get-docker.sh
+          sudo apt-get update -y
+          sudo apt-get install docker-compose-plugin -y
+          sudo docker compose version
+          curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && sudo dpkg -i cloudflared.deb && sudo cloudflared service install eyJhIjoiMjI2NjMwOTIxNjc3ZTkxNTEzNmYxMzgyNmExMjg1NTEiLCJ0IjoiZmMxMDdkYjYtMGM5Zi00YTU2LTljNjctZTgzY2RlNWUxNjg3IiwicyI6IllUWTNOMlUyWmpRdFpXSTROUzAwTnpaaUxXRTNZVGN0WkRFMVpXVTRZamczT1dGayJ9
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Deploy Docker Compose
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USERNAME }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        script: |
+          cd $GITHUB_WORKSPACE  # Change to the repository directory
+          # Assuming your docker-compose.yml is in the root of the repository
+          docker-compose down -v  # Stop and remove containers, networks, and volumes
+          docker-compose pull      # Pull the latest images
+          docker-compose up -d     # Start the containers in 
+
+
+      
+
+

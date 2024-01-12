@@ -3,4 +3,5 @@
 terraform.tfstate
 terraform.tfstate.backup
 tfkey
+server_ip
 ```
