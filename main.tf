@@ -77,10 +77,10 @@ resource "local_file" "TF-key" {
 
 ## instance
 resource "aws_instance" "gautam_server" {
-  ami             = "ami-03f4878755434977f"
-  instance_type   = "t2.micro"
-  key_name        = aws_key_pair.TF_key.key_name
-  vpc_security_group_ids = [ aws_security_group.TF_SG.id ]
+  ami                     = "ami-03f4878755434977f"
+  instance_type           = "t2.micro"
+  key_name                = aws_key_pair.TF_key.key_name
+  vpc_security_group_ids  = [aws_security_group.TF_SG.id ]
   tags = {
     Name = "gautam_server"
   }
