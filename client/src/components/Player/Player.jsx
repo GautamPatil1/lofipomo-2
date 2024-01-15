@@ -46,7 +46,7 @@ const Player = ({changeBackgroundImage}) => {
   }, [index]);
 
   const lofis = [
-    "http://usa9.fastcast4u.com/proxy/jamz?mp=/1",
+    "https://usa9.fastcast4u.com/proxy/jamz?mp=/1",
     "https://fluxfm.streamabc.net/flx-chillout-aacplus-64-5024703?sABC=659op428%230%2390nq633s25rons235r17766880390o71%23fgernzf.syhksz.qr&aw_0_1st.playerid=streams.fluxfm.de&amsparams=playerid:streams.fluxfm.de;skey:1704707112",
     "https://fluxfm.streamabc.net/flx-chillhop-aacplus-64-8724785?sABC=659op409%230%2390nq633s25rons235r17766880390o71%23fgernzf.syhksz.qr&aw_0_1st.playerid=streams.fluxfm.de&amsparams=playerid:streams.fluxfm.de;skey:1704707081",
     "https://ilm-stream12.radiohost.de/ilm_ilovechillhop_mp3-192",
