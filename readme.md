@@ -6,7 +6,6 @@
 
 Lofipomo is a MERN (MongoDB, Express, React, Node) full-stack web application designed to enhance productivity by combining a variety of features. It includes a Lofi Radio for tuning into your favorite chill tunes, a Todo List manager, a Notepad for jotting down your thoughts, and a Pomodoro Timer for effective time management.
 
-
 ## Features
 
 - **Lofi Radio Streams:** Tune into your favorite lofi songs while you work.Enjoy a curated selection of Lofi music streams to create a relaxed atmosphere while working.
@@ -41,7 +40,7 @@ To get a local copy up and running, follow these steps:
 1. Clone the repo
 2. Run Docker Compose `docker-compose up`.
 
-OR 
+OR
 
 1. Clone the repo
 2. Install packages in the said frontend & backend directories.
