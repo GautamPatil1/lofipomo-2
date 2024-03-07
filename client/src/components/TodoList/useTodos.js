@@ -39,7 +39,7 @@ export const useTodos = (initialTodos) => {
 
   useEffect(() => {
     const fetchTodosFromServer = async () => {
-      if (isAuthenticated) {
+      if (isAuthenticated && user && user.sub) {
         try {
           const response = await fetch(`${server}/api/todos/${user.sub}`);
           const data = await response.json();
@@ -49,9 +49,9 @@ export const useTodos = (initialTodos) => {
         }
       }
     };
-
+  
     fetchTodosFromServer();
-  }, [isAuthenticated]);
+  }, [isAuthenticated, user]);
 
 
 
