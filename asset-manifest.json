@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lofipomo-2/static/css/main.bb627f7c.css",
+    "main.js": "/lofipomo-2/static/js/main.bf7f28c5.js",
+    "static/js/787.d5fa4d18.chunk.js": "/lofipomo-2/static/js/787.d5fa4d18.chunk.js",
+    "index.html": "/lofipomo-2/index.html",
+    "main.bb627f7c.css.map": "/lofipomo-2/static/css/main.bb627f7c.css.map",
+    "main.bf7f28c5.js.map": "/lofipomo-2/static/js/main.bf7f28c5.js.map",
+    "787.d5fa4d18.chunk.js.map": "/lofipomo-2/static/js/787.d5fa4d18.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb627f7c.css",
+    "static/js/main.bf7f28c5.js"
+  ]
+}
