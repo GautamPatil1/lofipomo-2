@@ -12,19 +12,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      
       - name: Install dependencies and build
         run: |
           cd client
           npm install
           npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.6
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: client/build
-          clean: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./client/build
+
 
 
 
